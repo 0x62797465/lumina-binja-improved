@@ -73,6 +73,8 @@ No lumina-binja:
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/c3e478a1-a462-4797-88ad-dfc151fbf393)
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/d4cf845e-949f-46df-b676-824fa3c6bd36)
 
+#### Context:
+This is a binary with a fake comparison, due to renaming existing functions the old lumina-binja showed dead code. 
 
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
