@@ -30,6 +30,7 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
 - It fixes a requirement bug (which I think only happens on windows??? idrk)
 - It has installation and usage instructions
 - The readme is improved
+- Better security awareness 
 
 ## Additional info
  - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
