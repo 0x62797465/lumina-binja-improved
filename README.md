@@ -25,8 +25,6 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
  - Supported Architectures:
    - [x] x86 / x86_64
-   
-   and more to come!
  - Supported metadata types:
    - [x] function names
    - [x] comments
