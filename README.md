@@ -36,6 +36,7 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
  - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
  - Tested on binary ninja 3.5-stable & 3.6-dev
  - Tested with python 3.11
+ - Pushing metadata WILL FAIL! I may fix it or remove it in the future. 
  - Compatible with existing public Lumina databases (both official[^1] and unofficial), including TLS support
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
  - Supported Architectures:
