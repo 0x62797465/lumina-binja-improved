@@ -28,7 +28,10 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
 - It has installation and usage instructions
 - The readme is improved
 
-## Features
+## Additional info
+ - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
+ - Tested on binary ninja 3.5-stable & 3.6-dev
+ - Tested with python 3.11
  - Compatible with existing public Lumina databases (both official[^1] and unofficial), including TLS support
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
  - Supported Architectures:
@@ -52,7 +55,7 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
  - [Synactiv's blog](https://www.synacktiv.com/en/publications/investigating-ida-lumina-feature.html) for a high-level overview of how Lumina works
-
+ - [Me](https://twitter.com/0x62797465) for fixing stuff
 **Maple Bacon maintainers:**
  - [@nneonneo](https://github.com/nneonneo) for metadata reversing and implementation
  - [@desp](https://github.com/despawningbone) for signature generation and tinfo reversing, and stitching everything together
