@@ -16,23 +16,26 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
 12. Open a binary.
 13. Go to plugins, Lumina, pull all metadata, and it should do something!
 
-## Demo
-(In this poor quality gif I am using a shortcut to pull metadata for a stripped golang binary)
-![2023-10-16 08-04-09](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/e7880ac6-5240-43a4-9d41-e568b1059982)
-
 ## Features
  - Compatible with existing public Lumina databases (both official[^1] and unofficial), including TLS support
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
  - Supported Architectures:
    - [x] x86 / x86_64
+   - [ ] ARM / AArch64
+   
+   and more to come!
  - Supported metadata types:
    - [x] function names
    - [x] comments
      - [x] instruction level comments
      - [x] function level comments
-   - [x] function type info (currently parsing only)
+     - [ ] variable comments (unsupported by Binary Ninja)
+   - [x] function type info (WIP - currently parsing only)
      - [x] calling conventions
        - [x] generic conventions
+       - [ ] custom conventions (parsed, but unsupported by Binary Ninja)
+         - [ ] spoiled registers
+         - [ ] arbitrary argument locations/storage
      - [x] return type
      - [x] parameter types
      - [x] stack frame info
@@ -49,4 +52,4 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
  - [@nneonneo](https://github.com/nneonneo) for metadata reversing and implementation
  - [@desp](https://github.com/despawningbone) for signature generation and tinfo reversing, and stitching everything together
 
-[^1]: Provided that you have specified a valid IDA license file as the key file in the settings, along with the valid certificate to connect to `lumina.hex-rays.com`.
+[^1]: Provided that you have specified a valid IDA license file as the key file in the settings, along with the valid certificate to connect to `lumina.hex-rays.com`, as obtainable [from official sources](https://hex-rays.com/products/ida/lumina/lumina-cert-20191010/).

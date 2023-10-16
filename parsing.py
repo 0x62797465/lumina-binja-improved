@@ -1,6 +1,7 @@
 from binaryninja import BinaryView, Function, BackgroundTask, Type
 from binaryninja.transform import Transform
 from binaryninja.log import log_debug
+from binaryninja.log import Logger
 
 import socket, itertools
 
@@ -10,7 +11,7 @@ from lumina_structs.metadata import *
     
 from .sig.util import Sig, ARCH_MAPPING
 from .type import construct_type
-
+log = Logger(0, 'LuminaParse')
 #
 # Push Functions
 #
@@ -115,10 +116,17 @@ def craft_pull_md(bv: BinaryView, funcs: list[Function], task: BackgroundTask = 
 
 def apply_md(bv: BinaryView, func: Function, info: Container):
     #we don't really care about popularity atm, but it might be useful server side for sorting
+    # Assuming you have a function named 'func'
+    # If you want to overwide everything, comment eveything starting here and...
+    text_to_find = "sub_" # if it works it works
+    if text_to_find in str(func):                                       # a few more line
+        ()
+    else:
+        return                                                          # and here, this is the last line you have to comment
 
     #IDA (at least on 7.5) hardcoded no-override flag into apply_metadata, so tinfo and frame desc effectively never gets applied even if existing data is entirely auto-generated
     #we won't follow that - manually clearing the data on every lumina pull is very annoying and there is undo anyway
-    #instead we will default to resetting metadata to what lumina provides on conflict
+    #instead we will default to resetting metadata to what lumina provides on conflict // BOBERTTT commenting, yeah no f this
     func.name = info.metadata.func_name
     #func size should be the same to be able to get the same signature, so no need to set
     for md in info.metadata.serialized_data.chunks:
