@@ -135,16 +135,25 @@ def apply_md(bv: BinaryView, func: Function, info: Container):
                 #only | if is not empty string
                 func.set_comment_at(addr, ' | '.join(filter(bool, [c.anterior, (cmt if (cmt:=func.get_comment_at(addr)) else ''), c.posterior])))
         elif md.type == MetadataType.MD_TYPE_INFO:
-            t = construct_type(bv, md.data.tinfo, md.data.names)
+            try:
+                t = construct_type(bv, md.data.tinfo, md.data.names)
+            except:
+                ()
             #TODO handle argloc with set_call_reg_*(?)
-            func.function_type = t
+            try:
+                func.function_type = t
+            except:
+                ()
         elif md.type == MetadataType.MD_FRAME_DESC:
             #binja doesnt have the variable definition section for comments storage, so discard for now; also repr as a concept doesnt exist in binja
             for var in md.data.vars:
                 #sometimes type == None if its default so just treat it as byte array of nbytes
-                t = construct_type(bv, var.type.tinfo, var.type.names, var.nbytes) if var.type else Type.array(Type.int(1, sign=False, alternate_name='byte'), var.nbytes)
-                name = var.name if var.name else f'lumina_{hex(var.off)}'
+                try:
+                    t = construct_type(bv, var.type.tinfo, var.type.names, var.nbytes) if var.type else Type.array(Type.int(1, sign=False, alternate_name='byte'), var.nbytes)
+                    name = var.name if var.name else f'lumina_{hex(var.off)}'
 
+                except:
+                    ()
                 #TODO check if this still matches in architectures with stack growing up
                 func.delete_auto_stack_var(-(md.data.frsize - var.off + md.data.frregs))  #binja uses rbp instead of rsp (offset goes down instead of up)
                 func.create_user_stack_var(-(md.data.frsize - var.off + md.data.frregs), t, name)  #auto var gets overwritten by reanalysis
