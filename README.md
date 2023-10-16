@@ -1,5 +1,6 @@
 # lumina-binja
 IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja
+
 Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure or something idrk. If anyone is mitming your network maybe don't use this I guess.
 
 ## Setup
