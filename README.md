@@ -57,15 +57,19 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
  - All type info is supported, except structs and enums due to limitations of the current Lumina specification
 
 ## Comparing
+
 New lumina-binja:
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/b4333f67-e8b4-4a76-b9e3-818313522e9e)
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/b0eba36a-c6ba-4e1f-934a-efb46dd6cc05)
+
 Old lumina-binja:
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/7ff98b95-2b03-4ea0-a85d-a4df84bd2b23)
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/5096973a-c7b8-4846-9daf-00253d1edcca)
+
 No lumina-binja:
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/c3e478a1-a462-4797-88ad-dfc151fbf393)
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/d4cf845e-949f-46df-b676-824fa3c6bd36)
+
 
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
