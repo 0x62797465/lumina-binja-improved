@@ -49,4 +49,4 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
  - [@nneonneo](https://github.com/nneonneo) for metadata reversing and implementation
  - [@desp](https://github.com/despawningbone) for signature generation and tinfo reversing, and stitching everything together
 
-[^1]: Provided that you have specified a valid IDA license file as the key file in the settings, along with the valid certificate to connect to `lumina.hex-rays.com`, as obtainable [from official sources](https://hex-rays.com/products/ida/lumina/lumina-cert-20191010/).
+[^1]: Provided that you have specified a valid IDA license file as the key file in the settings, along with the valid certificate to connect to `lumina.hex-rays.com`.
