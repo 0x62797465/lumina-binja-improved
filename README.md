@@ -56,6 +56,7 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
  - [Synactiv's blog](https://www.synacktiv.com/en/publications/investigating-ida-lumina-feature.html) for a high-level overview of how Lumina works
  - [Me](https://twitter.com/0x62797465) for fixing stuff
+
 **Maple Bacon maintainers:**
  - [@nneonneo](https://github.com/nneonneo) for metadata reversing and implementation
  - [@desp](https://github.com/despawningbone) for signature generation and tinfo reversing, and stitching everything together
