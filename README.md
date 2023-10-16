@@ -20,6 +20,14 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
 (In this poor quality gif I am using a shortcut to pull metadata for a stripped golang binary)
 ![2023-10-16 08-04-09](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/e7880ac6-5240-43a4-9d41-e568b1059982)
 
+## How is the fork different?
+- It's maintained (to an extent)
+- It doesn't overwrite existing functions
+- It doesn't throw errors (as much)
+- It fixes a requirement bug (which I think only happens on windows??? idrk)
+- It has installation and usage instructions
+- The readme is improved
+
 ## Features
  - Compatible with existing public Lumina databases (both official[^1] and unofficial), including TLS support
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
