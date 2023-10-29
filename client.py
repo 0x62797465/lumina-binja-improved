@@ -110,7 +110,7 @@ class LuminaClient:
                     self.progress = '[Lumina] Applying metadata...'
 
                     if msg:
-                        it = iter(msg.results) #also results only have valid mds so its easier to model with iterator
+                        it = iter(msg.results) #also results only have valid mds so it's easier to model with iterator
                         for i, found in enumerate(msg.found):
                             if found == ResultType.RES_OK:
                                 apply_md(bv, copy[i], next(it))
@@ -120,7 +120,7 @@ class LuminaClient:
 
 
     #TODO test if we can get worker_enqueue working so we can calc metadata on a thread each
-    #so that pulling all metadata wont be this slow for big binaries somehow
+    #so that pulling all metadata won't be this slow for big binaries somehow
     #just calling worker_enqueue(lambda: self.push_function_md(bv, f)) introduces race conditions on f
 
     #
