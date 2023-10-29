@@ -119,24 +119,6 @@ class LuminaClient:
         RunPull('[Lumina] Pulling metadata...', True).start()  #doesnt matter if we copy or not here
 
 
-    def push_all_mds(self, bv: BinaryView):
-        log.log_info("Pushing all function metadata in the background...")
-
-        send_and_recv_rpc = self.send_and_recv_rpc
-        
-        class RunPush(BackgroundTaskThread):
-            def run(self):
-                kwargs = craft_push_md(bv, bv.functions)
-                
-                self.progress = '[Lumina] Sending push request...'
-
-                msg = send_and_recv_rpc(RPC_TYPE.PUSH_MD, **kwargs)[1]
-
-                if msg:
-                    log.log_info('Pushed ' + str(sum([d == ResultType.RES_ADDED for d in msg.resultsFlags])) + '/' + str(len(msg.resultsFlags)) + ' functions successfully.')
-
-        RunPush('[Lumina] Pushing metadata...', True).start()  #doesnt matter if we copy or not here
-
     #TODO test if we can get worker_enqueue working so we can calc metadata on a thread each
     #so that pulling all metadata wont be this slow for big binaries somehow
     #just calling worker_enqueue(lambda: self.push_function_md(bv, f)) introduces race conditions on f
@@ -154,12 +136,3 @@ class LuminaClient:
         if msg and msg.results:
             apply_md(bv, func, msg.results[0])
             log.log_info('Pulled metadata for function "' + func.name + '" successfully.')
-                
-
-    def push_function_md(self, bv: BinaryView, func: Function):
-        log.log_debug('Pushing metadata for func ' + func.name + '...')
-
-        msg = self.send_and_recv_rpc(RPC_TYPE.PUSH_MD, **craft_push_md(bv, [func]))[1]
-
-        if msg:
-            log.log_info('Pushed metadata for function "' + func.name + '" successfully.')

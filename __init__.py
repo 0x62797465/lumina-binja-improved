@@ -17,12 +17,8 @@ if 'lumina.host' not in settings.keys():
 #try logging in with configured params
 client = LuminaClient()
 
-#TODO option for reverting applied metadata
-
 PluginCommand.register_for_function('Lumina\\Pull current function metadata', 'Obtain function info from Lumina server', client.pull_function_md, client.is_valid)
-PluginCommand.register_for_function('Lumina\\Push current function metadata', 'Push function info to Lumina server', client.push_function_md, client.is_valid)
 
 PluginCommand.register('Lumina\\Pull all function metadata', 'Obtain all function info from Lumina server', client.pull_all_mds, client.is_valid)
-PluginCommand.register('Lumina\\Push all function metadata', 'Push all function info to Lumina server', client.push_all_mds, client.is_valid)
 
 PluginCommand.register('Lumina\\Reconnect', 'Reconnect to the lumina server with new configuration', client.reconnect)
