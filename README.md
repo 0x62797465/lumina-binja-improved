@@ -20,7 +20,7 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
 13. Go to plugins, Lumina, pull all metadata, and it should do something!
 
 ## Demo
-(In this poor quality gif I am using a shortcut to pull metadata for a stripped golang binary)
+(In this poor-quality gif I am using a shortcut to pull metadata for a stripped golang binary)
 ![2023-10-16 08-04-09](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/e7880ac6-5240-43a4-9d41-e568b1059982)
 
 ## How is the fork different?
@@ -36,7 +36,6 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
  - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
  - Tested on binary ninja 3.5-stable & 3.6-dev
  - Tested with python 3.11
- - Pushing metadata WILL FAIL! I may fix it or remove it in the future. 
  - Compatible with existing public Lumina databases (both official[^1] and unofficial), including TLS support
  - Signatures largely match IDA's implementation, enabling cross-disassembler collaboration (~85% accuracy, including discrepancies in analysis between disassemblers)
  - Supported Architectures:
@@ -75,7 +74,7 @@ No lumina-binja:
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/d4cf845e-949f-46df-b676-824fa3c6bd36)
 
 #### Context:
-This is a binary with a fake comparison, due to renaming existing functions the old lumina-binja showed dead code. 
+This is a crackme with a fake comparison, due to renaming existing functions the old lumina-binja showed dead code. 
 
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
