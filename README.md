@@ -1,8 +1,12 @@
 # lumina-binja
-IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja
+IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja. This fork adds a few main things:
+- Error handling
+- Instructions on how to use
+- It doesn't overwrite user/signature-defined functions
+- Removal of a non-working feature
 
-## Security notice
-Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure or something idrk. If anyone is mitming your network maybe don't use this I guess.
+## But what are all of the commits?
+I edited the readme... a lot.
 
 ## Setup
 1. Please use Linux.
@@ -18,19 +22,6 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
 11. Relaunch Binary Ninja.
 12. Open a binary.
 13. Go to plugins, Lumina, pull all metadata, and it should do something!
-
-## Demo
-(In this poor-quality gif I am using a shortcut to pull metadata for a stripped golang binary)
-![2023-10-16 08-04-09](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/e7880ac6-5240-43a4-9d41-e568b1059982)
-
-## How is the fork different?
-- It's maintained (to an extent)
-- It doesn't overwrite existing functions
-- It doesn't throw errors (as much)
-- It fixes a requirement bug (which I think only happens on windows??? idrk)
-- It has installation and usage instructions
-- The readme is improved
-- Better security awareness 
 
 ## Additional info
  - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
@@ -56,25 +47,8 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
        - [x] variable types
  - All type info is supported, except structs and enums due to limitations of the current Lumina specification
 
-## Comparing
-
-New lumina-binja:
-
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/b4333f67-e8b4-4a76-b9e3-818313522e9e)
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/b0eba36a-c6ba-4e1f-934a-efb46dd6cc05)
-
-Old lumina-binja:
-
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/7ff98b95-2b03-4ea0-a85d-a4df84bd2b23)
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/5096973a-c7b8-4846-9daf-00253d1edcca)
-
-No lumina-binja:
-
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/c3e478a1-a462-4797-88ad-dfc151fbf393)
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/d4cf845e-949f-46df-b676-824fa3c6bd36)
-
-#### Context:
-This is a crackme with a fake comparison, due to renaming existing functions the old lumina-binja showed dead code. 
+## Security notice
+Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure or something idrk. If anyone is mitming your network, don't use this.
 
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
