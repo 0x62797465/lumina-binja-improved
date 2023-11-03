@@ -2,6 +2,7 @@
 The original plugin developer said they may keep working on their plugin, I gave a $50 bounty for fixing the push function, and some of the binaryninja folk gave a swag bounty!
 ![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/ccb84265-43cc-409b-a466-607acc54fc65)
 If the dev does end up fixing everything, I will likely delete this fork (and make a new one, depending on what changes are made).
+Also, the folks at binary ninja may be working on their own lumina-style feature 👀 https://github.com/Vector35/binaryninja-api/issues/1466
 
 # lumina-binja
 IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja. This fork adds a few main things:
