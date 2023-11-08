@@ -25,7 +25,7 @@ I edited the readme... a lot.
 8. Go to settings.
 9. Search for "lumina."
 10. You can configure it if you have an IDA license. If you don't, keep reading.
-11. In the host field, enter "lumen.abda.nl," and set the port to 1235. Download [this cert](https://abda.nl/lumen/hexrays.crt), and enter the path to it (like /home/h/Downloads/hexrays.crt) under "lumina cert."
+11. In the host field, enter "lumen.abda.nl," and set the port to 1235. Download [this cert](https://abda.nl/lumen/hexrays.crt), and enter the path to it (like /home/h/Downloads/hexrays.crt) under "lumina cert." (Note: There are not many people who use Lumen, here's a small list of people who do: people who use cracked versions of IDA, people who have expired IDA licenses, and people like you who use plugins like these!)
 12. Relaunch Binary Ninja.
 13. Open a binary.
 14. Go to plugins, Lumina, pull all metadata, and it should do something!
