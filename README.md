@@ -1,9 +1,3 @@
-# UPDATE!
-The original plugin developer said they may keep working on their plugin, I gave a $50 bounty for fixing the push function, and some of the binaryninja folk gave a swag bounty!
-![image](https://github.com/Boberttt/lumina-binja-improved/assets/104478197/ccb84265-43cc-409b-a466-607acc54fc65)
-If the dev does end up fixing everything, I will likely delete this fork (and make a new one, depending on what changes are made).
-Also, the folks at binary ninja may be working on their own lumina-style feature 👀 https://github.com/Vector35/binaryninja-api/issues/1466
-
 # lumina-binja
 IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja. This fork adds a few main things:
 - Error handling
@@ -16,7 +10,7 @@ I edited the readme... a lot.
 
 ## Setup
 1. Please use Linux.
-2. Clone this repo into your $home/.binaryninja/plugins folder.
+2. Clone this repo into your $HOME/.binaryninja/plugins folder.
 3. cd to the cloned folder.
 4. Run `/usr/bin/python3.11 -m pip --isolated --disable-pip-version-check install --upgrade --upgrade-strategy only-if-needed --target $HOME/.binaryninja/python311/site-packages -r requirements.txt` (Note that this command might not work on your computer; consider using just "python," ensuring pip is installed, or replacing $home with your actual home).
 5. Also run `/usr/bin/python3.11 -m pip --isolated --disable-pip-version-check install --upgrade --upgrade-strategy only-if-needed --target $HOME/.binaryninja/python311/site-packages construct`
