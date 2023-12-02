@@ -3,6 +3,7 @@ IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented
 - Error handling
 - Instructions on how to use
 - It doesn't overwrite user/signature-defined functions
+- Demangles functions
 - Removal of a non-working feature
 
 ## But what are all of the commits?
