@@ -2,9 +2,9 @@ from binaryninja import BinaryView, Function, BackgroundTask, Type
 from binaryninja.transform import Transform
 from binaryninja.log import log_debug
 from binaryninja.log import Logger
-
+from binaryninja import demangle_ms, demangle_gnu3, get_qualified_name
 import socket, itertools
-
+import os # Used for shitty debugging don't mind it 
 from construct import *
 from lumina_structs import *
 from lumina_structs.metadata import *
@@ -127,7 +127,16 @@ def apply_md(bv: BinaryView, func: Function, info: Container):
     #IDA (at least on 7.5) hardcoded no-override flag into apply_metadata, so tinfo and frame desc effectively never gets applied even if existing data is entirely auto-generated
     #we won't follow that - manually clearing the data on every lumina pull is very annoying and there is undo anyway
     #instead we will default to resetting metadata to what lumina provides on conflict // BOBERTTT commenting, yeah no f this
-    func.name = info.metadata.func_name
+    ms = demangle_ms(bv.arch, info.metadata.func_name)
+    gnu = demangle_gnu3(bv.arch, info.metadata.func_name)
+
+    if ms[0] != None:
+        a = get_qualified_name(ms[1])
+    elif gnu[0] != None:
+        a = get_qualified_name(gnu[1])
+    else:
+        a = info.metadata.func_name
+    func.name = a
     #func size should be the same to be able to get the same signature, so no need to set
     for md in info.metadata.serialized_data.chunks:
         if md.type in [MetadataType.MD_INSN_CMT, MetadataType.MD_INSN_REPCMT]:
