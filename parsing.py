@@ -4,7 +4,6 @@ from binaryninja.log import log_debug
 from binaryninja.log import Logger
 from binaryninja import demangle_ms, demangle_gnu3, get_qualified_name
 import socket, itertools
-import os # Used for shitty debugging don't mind it 
 from construct import *
 from lumina_structs import *
 from lumina_structs.metadata import *
