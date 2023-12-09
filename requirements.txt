@@ -1,2 +1,3 @@
 capstone>=4.0.2
 git+https://github.com/boberttt/lumina_structs
+construct
