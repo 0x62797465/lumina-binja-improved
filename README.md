@@ -14,7 +14,7 @@ I edited the readme... a lot.
 2. Clone this repo into your $HOME/.binaryninja/plugins folder.
 3. cd to the cloned folder.
 4. Run `/usr/bin/python3.11 -m pip --isolated --disable-pip-version-check install --upgrade --upgrade-strategy only-if-needed --target $HOME/.binaryninja/python311/site-packages -r requirements.txt` (Note that this command might not work on your computer; consider using just "python," ensuring pip is installed, or replacing $home with your actual home).
-6. Now it *should* be able to launch. If it can't, please open an issue.
+6. Now it *should* be able to launch, if it can't, please open an issue.
 7. Launch Binary Ninja.
 8. Go to settings.
 9. Search for "lumina."
