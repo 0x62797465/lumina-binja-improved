@@ -40,6 +40,23 @@ I edited the readme... a lot.
 13. Open a binary.
 14. Go to plugins, Lumina, pull all metadata, and it should do something!
 
+## Setup (MacOS)
+1. Use MacOS.
+2. Clone this repo into your  ~/Library/Application Support/Binary Ninja/plugins/.
+3. cd to the cloned folder.
+4. Run ` python3.10 -m pip --isolated --disable-pip-version-check install --upgrade --upgrade-strategy only-if-needed --target ~/Library/Application\ Support/Binary\ Ninja/python310/site-packages -r ~/Library/Application\ Support/Binary\ Ninja/plugins/lumina-binja-improved/requirements.txt` 
+5. Make sure Rosetta is installed, and run Binary Ninja with Rosetta on. [here is the toturial](https://support.apple.com/en-us/102527). 
+6. Now it *should* be able to launch, if it can't, please open an issue.
+7. Launch Binary Ninja.
+8. Go to settings.
+9. Search for "lumina."
+10. You can configure it if you have an IDA license. If you don't, keep reading.
+11. In the host field, enter "lumen.abda.nl," and set the port to 1235. Download [this cert](https://abda.nl/lumen/hexrays.crt), and enter the path to it (like /home/h/Downloads/hexrays.crt) under "lumina cert." (Note: There are not many people who use Lumen, here's a small list of people who do: people who use cracked versions of IDA, people who have expired IDA licenses, and people like you who use plugins like these!)
+12. Relaunch Binary Ninja.
+13. Open a binary.
+14. Go to plugins, Lumina, pull all metadata, and it should do something!
+
+
 ## Additional info
  - If you want to override ALL functions (not the default, which is only overriding things that start with sub_) go to parsing.py at line 120 and follow the instructions given.
  - Tested on binary ninja 3.5-stable & 3.6-dev
