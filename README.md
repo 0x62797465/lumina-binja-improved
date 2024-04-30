@@ -87,7 +87,6 @@ Please note that this uses SSL/TLS protocol version TLSv1, and it's not secure o
 ## Credits
  - [Lumen](https://github.com/naim94a/lumen) for most of the RPC protocol reversing
  - [Synactiv's blog](https://www.synacktiv.com/en/publications/investigating-ida-lumina-feature.html) for a high-level overview of how Lumina works
- - [Me](https://twitter.com/0x62797465) for fixing stuff
 
 **Maple Bacon maintainers:**
  - [@nneonneo](https://github.com/nneonneo) for metadata reversing and implementation
