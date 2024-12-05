@@ -1,3 +1,5 @@
+# UPDATE
+https://github.com/Vector35/binaryninja-api/issues/1466
 # lumina-binja
 IDA's [Lumina](https://hex-rays.com/products/ida/lumina/) feature, reimplemented for Binary Ninja. This fork adds a few main things:
 - Error handling
